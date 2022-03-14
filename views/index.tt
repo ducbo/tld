@@ -1,0 +1,14 @@
+<center>
+	<br /><br /><br />
+	<h1>Welcome to vn.al</h1>
+</center>
+
+<br />
+
+<div class="body">
+	<p>.vn.al is a new general purpose TLD (top level domain). Registering a .vn.al domain is free for everyone.</p>
+	<p>Create or log in to an account in order to register or update .vn.al domains.</p>
+	<center>
+		<p><a class="bracketButton" href="login">[ Login ]</a>&nbsp;&nbsp;<a class="bracketButton" href="register">[ Register ]</a></p>
+	</center>
+</div>

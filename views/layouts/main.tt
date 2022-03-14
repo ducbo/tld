@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang=en>
+	<head>
+		<meta charset="utf8" />
+		<meta name="viewport" content="width=device-width" />
+		<% IF redir %>
+		<meta http-equiv="refresh" content="0;<% redir %>" />
+		<% END %>
+		<title>CU.TN - Free Domain Name</title>
+		<link rel="stylesheet" type="text/css" href="/css/light.css" />
+	</head>
+	<body>
+		<div class="inner">
+			<% IF vars.auth %>
+			<div class="toolbar">
+				<div class="body">
+					<span>
+						Logged in as <span id="email"><% vars.email | html_entity %></span>
+					</span>
+					<span style="float:right;">
+						<span class="menuBtnW"><a href="/domains" class="menuBtn">Domains</a></span><!--
+						--><span class="menuBtnW"><a href="/account" class="menuBtn">Account</a></span><!--
+						<% IF vars.admin %>
+						--><span class="menuBtnW"><a href="/admin" class="menuBtn">Admin</a></span><!--
+						<% END %>
+						--><form action="/logout" method="POST"><!--
+							--><span class="menuBtnW"><button action="submit" class="menuBtn">Log&nbsp;out</button></span>
+						</form>
+					</span>
+				</div>
+			</div>
+			<% END %>
+			<% IF vars.zone_check_alert %>
+			<div class="body">
+				<center>
+					<div class="msgBox warning">
+						<h3>Warning!</h3>
+						The zone produced by the zone writer was found to be invalid by nsd; something has gone wrong! Please rectify the problem, and this message will disappear.
+					</div>
+				</center>
+			</div>
+			<% END %>
+			<% content %>
+		</div>
+	</body>
+</html>

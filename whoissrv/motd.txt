@@ -1,0 +1,6 @@
+ModernTLD Registration Services [whois]
+
+The following information is presented in the hopes that it will be useful,
+but ModernTLD makes ABSOLUTELY NO GUARANTEE as to its accuracy.
+
+Queries made to this service may be logged.

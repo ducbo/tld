@@ -1,0 +1,62 @@
+<center>
+	<br />
+	<h1>Your Domains</h1>
+	<br />
+
+	<% IF params.new %>
+	<div class="msgBox">
+		The domain <em><% params.new | html_entity %>.<% vars.config.tld %></em> was registered successfully!
+	</div>
+	<br /><br />
+	<% END %>
+	<% IF params.removed %>
+	<div class="msgBox">
+		The domain <em><% params.removed | html_entity %>.<% vars.config.tld %></em> was removed successfully.
+	</div>
+	<br /><br />
+	<% END %>
+</center>
+
+<div class="body">
+	<center>
+		<a class="bracketButton" href="domains/new">[ Register a domain ]</a>
+	</center>
+
+	<% IF domains.size > 0 %>
+	<em>
+		<% domains.size %>
+		<% IF domains.size == 1 %>
+		domain
+		<% ELSE %>
+		domains
+		<% END %>
+	</em>
+
+	<br />
+
+	<table class="domains t">
+		<tr>
+			<td>
+				<strong>Domain name</strong>
+			</td>
+			<td>
+				<strong>Actions</strong>
+			</td>
+		</tr>
+		<% FOREACH d IN domains %>
+		<tr>
+			<td>
+				<% d.name | html_entity %>.<% vars.config.tld %>
+			</td>
+			<td>
+				<a class="bracketButton" href="domains/<% d.name %>/records">[ Edit ]</a>
+				<a class="bracketButton" href="domains/<% d.name %>/remove">[ Remove ]</a>
+			</td>
+		</tr>
+		<% END %>
+	</table>
+
+	<% ELSE %>
+	You don't have any domains registered.
+	<% END %>
+</div>
