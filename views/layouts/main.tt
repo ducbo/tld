@@ -6,7 +6,7 @@
 		<% IF redir %>
 		<meta http-equiv="refresh" content="0;<% redir %>" />
 		<% END %>
-		<title>CU.TN - Free Domain Name</title>
+		<title>VN.AL - Free Domain Name</title>
 		<link rel="stylesheet" type="text/css" href="/css/light.css" />
 	</head>
 	<body>
